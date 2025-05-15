@@ -1,0 +1,49 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+out-tsc/
+
+# Environment files
+.env
+.env.*.local
+src/environments/*.ts
+!src/environments/environment.ts
+
+# Angular local configuration
+.angular/
+.angular/cache/
+.angular.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Compiled JS
+*.js
+*.js.map
+
+# Coverage
+coverage/
+
+# EmailJS (optional)
+emailjs.config.js
+
+# Misc
+*.tgz
+*.gz
+*.zip
