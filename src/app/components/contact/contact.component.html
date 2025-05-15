@@ -21,17 +21,17 @@
         <div class="form-row">
           <div class="form-group stacked">
             <label for="city">City</label>
-            <input type="text" id="city" placeholder="ex. Thessaloniki" />
+            <input type="text" id="city" formControlName="city" placeholder="ex. Thessaloniki" />
           </div>
           <div class="form-group stacked">
             <label for="postalCode">Postal Code</label>
-            <input type="text" id="postalCode" placeholder="ex. 54658" />
+            <input type="text" id="postalCode" formControlName="postalCode" placeholder="ex. 54658" />
           </div>
         </div>
 
         <div class="form-group stacked">
           <label for="address">Address</label>
-          <input type="text" id="address" placeholder="ex. Thessaloniki" />
+          <input type="text" id="address" formControlName="address" placeholder="ex. Thessaloniki" />
         </div>
 
         <div class="form-group stacked message-group">
@@ -39,7 +39,7 @@
             <label for="message">Your Message</label>
             <span class="optional">Optional</span>
           </div>
-          <textarea id="message" rows="5" placeholder="Type your message"></textarea>
+          <textarea id="message" rows="5" formControlName="message" placeholder="Type your message"></textarea>
         </div>
 
         <div class="form-check-wrapper">

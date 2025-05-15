@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
+import { EMAILJS_CONFIG } from '../../../emailjs.config';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -26,23 +27,22 @@ export class ContactComponent {
     }
 
     emailjs.send(
-      'service_g5j0moc',
-      'template_dnufduu',
-      {
-        name: this.contactForm.value.name,
-        email: this.contactForm.value.email,
-        city: this.contactForm.value.city,
-        postal: this.contactForm.value.postalCode,
-        address: this.contactForm.value.address,
-        message: this.contactForm.value.message,
-      },
-      'OdTnhN4ud0YDPaZRs'
-    )
-    .then(() => {
+      EMAILJS_CONFIG.SERVICE_ID,
+      EMAILJS_CONFIG.TEMPLATE_ID, {
+      title: EMAILJS_CONFIG.EMAIL_TITLE,
+      name: this.contactForm.value.name,
+      email: this.contactForm.value.email,
+      time: new Date().toLocaleString(),
+      city: this.contactForm.value.city,
+      postal: this.contactForm.value.postalCode,
+      address: this.contactForm.value.address,
+      message: this.contactForm.value.message,
+    },
+      EMAILJS_CONFIG.PUBLIC_KEY
+    ).then(() => {
       alert('Message sent successfully!');
       this.contactForm.reset();
-    })
-    .catch((error) => {
+    }).catch((error) => {
       alert('Failed to send message. Please try again.');
       console.error('EmailJS error:', error);
     });
