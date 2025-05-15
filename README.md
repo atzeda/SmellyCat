@@ -26,14 +26,4 @@ npm install
 ng serve
 ```
 
-## 🔧 Configuration
-
-To enable EmailJS:
-
-1. Create an account at [emailjs.com](https://dashboard.emailjs.com/)
-2. Create an email service and template
-3. Replace the following in `contact.component.ts`:
-   - `YOUR_SERVICE_ID`
-   - `YOUR_TEMPLATE_ID`
-   - `YOUR_PUBLIC_KEY`
 
